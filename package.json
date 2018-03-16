@@ -14,7 +14,8 @@
     "pack": "npm run pack:main && npm run pack:renderer",
     "pack:main": "cross-env NODE_ENV=production webpack --progress --colors --config .electron-vue/webpack.main.config.js",
     "pack:renderer": "cross-env NODE_ENV=production webpack --progress --colors --config .electron-vue/webpack.renderer.config.js",
-    "postinstall": ""
+    "postinstall": "",
+    "package": "electron-packager ./ electronchat --win --out electronchat --arch=x64 --version 1.8.3 --overwrite --ignore=node_modules" 
   },
   "build": {
     "productName": "ele",
@@ -52,6 +53,7 @@
   },
   "dependencies": {
     "axios": "^0.16.1",
+    "electron-packager": "^11.1.0",
     "element-ui": "^2.2.1",
     "express": "^4.16.3",
     "mockjs": "^1.0.1-beta3",
