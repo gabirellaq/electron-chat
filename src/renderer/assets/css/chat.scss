@@ -1,0 +1,90 @@
+.chatdetail {
+    flex:1;
+    overflow: auto;
+}
+.chatbox {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    .chatcontent {
+        flex: 1;
+        overflow: auto;
+    }
+}
+
+.chattools {
+    display: flex;
+    flex-direction: column;
+    height: 165px;
+    border-top:1px solid $border-color;
+    .chattoolbar {
+        padding:5px 6px;
+        i {
+            font-size: $font-des-size * 2;
+            margin-right: 5px;
+        }
+    }
+    .chatMess {
+        flex: 1;
+        textarea {
+            width: 100%;
+            height: 96%;
+            border: 0;
+            outline: 0;
+            box-sizing: border-box;
+            resize: none;
+            padding: 0 10px;
+            background: transparent;
+        }
+    }
+    .chatbutton {
+        padding:10px;
+        text-align: right;
+    }
+}
+
+.chatmessage {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding:10px;    
+    img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin-right: 15px;
+    }
+    > span {
+        background: $grey-color;
+        border-radius: 5px;
+        padding:8px 15px;
+        position: relative;
+        max-width: 60%;
+        &:before {
+            content: '';
+            position: absolute;
+            left: -6px;
+            top:10px;
+            @include arrow(left, 6px, $grey-color);
+        }
+        img {
+            max-width: 100%;
+        }
+    }
+    &.chatme {
+        justify-content: flex-end;
+        img {
+            margin-left: 15px;
+            margin-right: 0;
+        }
+        > span {
+            background: $green-color;
+            color: $white-color;
+            &:before {
+                left: auto;
+                right: -6px;
+                @include arrow(right, 6px, $green-color);
+            }
+        }
+    }
+}

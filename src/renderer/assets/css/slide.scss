@@ -1,0 +1,118 @@
+.slide {
+    width: $slide-width + $people-width;
+    .slideleft {
+        background: $black-color;
+        width: $slide-width;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+    }
+    .closeButton {
+        margin-top: 12px;
+        > span {
+            width:12px;
+            height:12px;
+            display: inline-block;
+            border-radius: 50%;
+            margin: 2px;
+            vertical-align: middle;
+            line-height: .4;
+            text-align: center;
+            &.redbtn {
+                background: $red-color
+            }
+            &.yellowbtn {
+                background: $yellow-color
+            }
+            &.greenbtn {
+                background: $green-color
+            }
+            .iconfont {
+                font-size: $font-des-size - 5;
+                color:$white-color;
+                display: none;
+                &.icon-xinyongqia {
+                    color:$black-color;
+                }
+            }
+            &:hover {
+                .iconfont {
+                    display: block;
+                }
+            }
+        }
+    }
+    .avatar {
+        width:45px;
+        height:45px;
+        margin-top: 35px;
+        img {
+            width:100%;
+            border-radius: 50%;
+        }
+    }
+    .slide-button {
+        flex: 1;
+        margin:16px 0 20px 0;
+        .is-left i {
+            display: block;
+            font-size: 26px;
+            color: #d4d4d4;
+            margin-top: 22px;
+        }
+        .router-link-active {
+            i {
+                color:$green-color;
+            }
+        }
+    }
+    .slide-set {
+        i {
+            display: block;
+            font-size: 26px;
+            color: #d4d4d4;
+            margin-bottom: 30px;
+        }
+    }
+    .el-tabs--left{
+        > .el-tabs__header.is-left {
+            margin-right: 0;
+            .el-tabs__nav-wrap:after {
+                background: transparent;
+            }
+        }
+        .el-tabs__active-bar.is-left {
+            //position: static;
+            background: transparent;
+        }
+        .el-tabs__item.is-left.is-active {
+            .iconfont  {
+                color: $green-color;
+            }
+        }
+        > .el-tabs__content {
+            position: absolute;
+            left: $slide-width;
+            top: 0;
+            bottom: 0;
+            background: $white-color;
+            width: $people-width;
+            z-index: 3;
+            border-right:1px solid $border-color;
+            box-sizing: border-box;
+            overflow: auto;
+        }
+    } 
+    .el-tabs__active-bar.is-top {
+        background: transparent;
+    }
+    .el-tabs__header {
+        margin:0;
+    }
+}
+
+.el-tabs__item.is-active {
+    color: $green-color;
+}

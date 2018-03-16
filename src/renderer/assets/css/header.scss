@@ -1,0 +1,24 @@
+.header {
+    position: absolute;
+    top:0;
+    right: 0;
+    left:0;
+    display: flex;
+    align-items: center;    
+    -webkit-app-region: drag;
+    height: 18px;
+    .headertitle {
+        flex: 1;
+        text-align: center;
+        color:$white-color;
+        font-weight: bold;
+    }
+    .headericon {
+        .iconfont {
+            color: $white-color;
+            margin: 5px 10px;
+            display: inline-block;
+            -webkit-app-region: no-drag;
+        }
+    }
+}

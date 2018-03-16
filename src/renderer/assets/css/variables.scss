@@ -1,0 +1,58 @@
+$slide-width: 70px;
+$header-height: 50px;
+$people-width:260px;
+
+$border-color: #dedefd;
+
+$blue-color: #01B1FF;
+$grey-color:#f5f5f5;
+
+$white-color:#fff;
+$black-color:#303344;
+$yellow-color:#ffaf32;
+
+$red-color:#e7383a;
+$green-color:#13a011;
+
+$purple:#502c73;
+$lighten-purple:#B272F2;
+
+$blue1-color:#1E9BA8;
+$blue2-color: #197cb4;
+
+$font-title-size:16px;
+$font-size:14px;
+$font-des-size:12px;
+
+$font-title-color:#333;
+$font-color:#666;
+$font-des-color:#999;
+
+@mixin textoverflow() {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+@mixin arrow ($direction:top, $border-width:6px, $border-color:#ccc) {
+    @if ($direction == top) {
+        border-width: 0 $border-width $border-width $border-width;
+        border-style: solid;
+        border-color: $border-color transparent;
+    }
+    @if ($direction == bottom) {
+        border-width: $border-width $border-width 0 $border-width;
+        border-style: solid;
+        border-color: $border-color transparent;
+    }
+    @if ($direction == left) {
+        border-width: $border-width $border-width $border-width 0;
+        border-style: solid;
+        border-color: transparent $border-color;
+    }
+    @if ($direction == right) {
+        border-width: $border-width 0 $border-width $border-width;
+        border-style: solid;
+        border-color: transparent $border-color;
+    }
+}

@@ -1,0 +1,172 @@
+.groupTab {
+    .el-tabs__nav-wrap {
+        padding:0 20px;
+    }
+}
+.people {
+
+    .search {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin:10px 0;
+        .addbutton {
+            margin:0 10px 0 0px;
+            i {
+                color: $green-color;
+                font-size: 25px;
+                display: block;
+            }
+        }
+        .searchbox {
+            flex: 1;
+            margin:0 10px 0 10px;            
+            input {
+                border:1px solid $border-color;
+                border-radius: 20px;
+                padding:5px 10px;
+                width: 100%;
+            }
+        }
+    }    
+}
+.list {
+    li {
+        a {
+            display: block;
+            padding: 12px;
+            border-top:1px solid $border-color;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            overflow: hidden;
+            img {
+                width: 44px;
+                height:44px;
+                border-radius: 50%;
+            }
+            .content {
+                flex:1;
+                margin-left: 10px;
+                position: relative;
+                overflow: hidden;
+                .t {
+                    display: flex;
+                    align-content: center;
+                    justify-content: space-between;
+                    overflow: hidden;
+                    margin-bottom: 7px;
+                }
+                .title {
+                    font-size: $font-size;
+                    font-weight: bold;
+                    color:$font-title-color;
+                    flex: 1;
+                    @include textoverflow;
+                }
+                .time {
+                    font-size: $font-des-size;
+                    color:$font-des-color;
+                    margin-left: 10px;
+                }
+                .des {
+                    font-size: $font-des-size;
+                    color:$font-des-color;
+                    display: block;
+                    @include textoverflow;
+                }
+            }
+            &.router-link-active {
+                background-color: $grey-color;
+            }
+        }
+        &:first-child {
+            a {
+                border:0;
+            }
+        }
+    }
+}
+
+.listnull {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: $font-size;
+    color:$font-des-color;
+    flex-direction: column;
+    margin-top: 30%;
+    i {
+        font-size: $font-size * 3;
+        margin-bottom: 10px;
+    }
+}
+
+.chattitle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: $font-size;
+    border-bottom:1px solid $border-color;
+    height:$header-height;
+    overflow: hidden;
+    padding: 0 10px;
+    h1 {
+        text-align: center;
+        font-size: inherit;
+        @include textoverflow;
+    }
+    h1,
+    span {
+        margin:0 5px;
+    }
+    span {
+        i {
+            font-size: 20px;
+        }
+    }
+}
+
+.groupdetail {
+    flex: 1;
+    overflow: auto;
+    .userdetailcontent {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 100px;
+        .avatar {
+            img {
+                width: 80px;
+                height:80px;
+                border-radius: 50%;
+            }
+            > span {
+                display: inline-block;
+                margin:15px;
+                img,span {
+                    display: block;
+                    text-align:center;
+                }
+            }
+        }
+        > span {
+            margin:20px 0;
+        }
+    }
+}
+
+.grouppage {
+    .list {
+        a {
+            border: 0;
+            align-items: center;
+            padding: 10px 20px;
+            img {
+                width: 35px;
+                height:35px;
+            }
+        }
+    }
+}

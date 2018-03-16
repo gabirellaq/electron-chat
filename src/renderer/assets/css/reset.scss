@@ -1,0 +1,79 @@
+body,html,#app, .slide {
+    height:100%;
+  }
+  *{
+      box-sizing:border-box;
+  }
+  * {
+      outline:0;
+  }
+  html,body{
+      width: 100%;
+      min-height: 100%;
+      touch-action: manipulation; /* IE11+ 禁止双击缩放，关于移动端300ms延迟：https://github.com/ftlabs/fastclick */  
+      -ms-touch-action: manipulation; /* IE10+ 禁止双击缩放 */
+  }
+  body{
+      font-family: Microsoft YaHei,STHeiti,Helvetica,Arial,sans-serif;
+      font-size:$font-size;
+      color:$font-color;
+      line-height: 1.4;
+  }
+  img{vertical-align: top;border: 0;}
+  ul, li, ol{
+      list-style-type: none;
+  }
+  a, blockquote, body, button, code, dd, div, dl, dt, em, fieldset, form, h1, h2, h3, h4, h5, h6, html,iframe, img, input, label, li, object, ol, p, q, small, span, strong, table, tbody, td, th, tr, ul {
+      margin: 0;
+      padding: 0;
+      border: 0;
+  }
+  h1, h2, h3, h4, h5, h6{
+      font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+  }
+  
+  button, input, select, textarea { 
+      font-size: $font-des-size;
+      line-height:normal;
+      font-family: Microsoft YaHei,STHeiti,Helvetica,Arial,sans-serif;
+ }
+  button, input, select, label{vertical-align:middle;}
+  table{ border-collapse: collapse; border-spacing: 0; }
+  input[type="button"],input[type="submit"],input[type="reset"]{cursor:pointer;}
+  a{color: #333; outline: none; text-decoration: none;}
+  a:focus{outline: none;}
+  .clearfix:after {visibility:hidden;display:block;font-size:0;content:" ";clear:both;height:0;}
+  .clearfix {zoom:1; }
+  em{
+      font-style: normal;
+  }
+
+  #body {
+      display: flex;
+      height:100%;
+  }
+  .iconfont {
+      line-height: 1;
+      display: inline-block;
+      &:before {
+          transform: translateY(5px);
+          display: inline-block;
+      }
+  }
+
+  /* 设置滚动条的样式 */
+::-webkit-scrollbar {
+    width: 5px;
+}
+/* 滚动槽 */
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+/* 滚动条滑块 */
+::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    background: rgba(0,0,0,.1);
+}
+::-webkit-scrollbar-thumb:window-inactive {
+    background: rgba(0,0,0,.1);
+}
