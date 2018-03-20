@@ -1,9 +1,9 @@
 <template>
     <div class="userDetail">
-        <div class="chatcontent userdetailcontent">
+        <div class="chatcontent userdetailcontent" v-for="x in data" v-if="x.id == id">
             <div class="avatar" v-if="name === 'user'">
                 <span>
-                    <img :src="data[id].images">
+                    <img :src="x.images">
                 </span>
             </div>
             <div class="avatar" v-if="name === 'group'">
@@ -12,7 +12,7 @@
                     <span>xx</span>
                 </span>
             </div>
-            <span>{{data[id].name}}</span>
+            <span>{{x.name}}</span>
             <el-button type="success">发消息</el-button>
         </div>
     </div>

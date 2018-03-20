@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "author": "emily qi <v-emqi@microsoft.com>",
   "description": "An electron-vue project",
-  "license": null,
+  "license": "null",
   "main": "./dist/electron/main.js",
   "scripts": {
     "build": "node .electron-vue/build.js && electron-builder",
@@ -15,7 +15,7 @@
     "pack:main": "cross-env NODE_ENV=production webpack --progress --colors --config .electron-vue/webpack.main.config.js",
     "pack:renderer": "cross-env NODE_ENV=production webpack --progress --colors --config .electron-vue/webpack.renderer.config.js",
     "postinstall": "",
-    "package": "electron-packager ./ electronchat --win --out electronchat --arch=x64 --version 1.8.3 --overwrite --ignore=node_modules" 
+    "package": "electron-packager ./ electronchat --win --out electronchat --arch=x64 --version 1.8.3 --overwrite --ignore=node_modules"
   },
   "build": {
     "productName": "ele",

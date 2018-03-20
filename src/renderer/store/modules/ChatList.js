@@ -2,11 +2,15 @@ import axios from 'axios';
 
 const state = {
     chatlist: [], //聊天列表
+    chatmyself: [], //临时保存本地聊天记录
 }
 
 const mutations = {
     GETCHATLIST (state, res) {
         state.chatlist = res;
+    },
+    GETCHATMYSELT (state, res) {
+        state.chatmyself.push(res)
     }
 }
 

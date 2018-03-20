@@ -1,6 +1,6 @@
 <template>
     <div class="chatdetail">
-        <ChatComponent></ChatComponent>
+        <ChatComponent :data="chatData" :id="this.$route.params.id"></ChatComponent>
     </div>
 </template>
 
@@ -18,13 +18,17 @@
             }
         },
         methods: {
-
+            ...mapActions([
+                'getChatList'
+            ])
         },
         computed: {
-
+            ...mapState({
+                'chatData': state => state.ChatList.chatlist
+            })
         },
         mounted() {
-            
+            this.getChatList();
         }
     }
 </script>

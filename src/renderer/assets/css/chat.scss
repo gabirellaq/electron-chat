@@ -3,9 +3,24 @@
     overflow: auto;
 }
 .chatbox {
-    display: flex;
-    flex-direction: column;
     height: 100%;
+    position: relative;
+    &:before {
+        content: 'ELECTRON CHAT';
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        top: 40%;
+        font-size: 40px;
+        color: lighten($font-des-color, 15%);
+        z-index: -1;
+    }
+    > div {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        background: $white-color;
+    }
     .chatcontent {
         flex: 1;
         overflow: auto;
@@ -22,6 +37,32 @@
         i {
             font-size: $font-des-size * 2;
             margin-right: 5px;
+        }
+        .emojispan {
+            position: relative;
+        }
+        .exprMain {
+            position: absolute;
+            width: 300px;
+            height: 210px;
+            overflow: auto;
+            left: 0;
+            bottom: 26px;
+            background: $grey-color;
+            box-shadow: 0 1px 5px rgba(0,0,0,.5);
+            border-radius: 4px;
+            display: none;
+            a {
+                display: inline-block;
+                width: 14.2857%;
+                text-align: center;
+                font-size: 28px;
+                cursor: pointer;
+                padding-bottom: 3px;
+                &:hover {
+                    background: darken($grey-color, 5%);
+                }
+            }
         }
     }
     .chatMess {
@@ -71,7 +112,7 @@
             max-width: 100%;
         }
     }
-    &.chatme {
+    &.me {
         justify-content: flex-end;
         img {
             margin-left: 15px;
